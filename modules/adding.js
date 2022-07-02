@@ -12,5 +12,7 @@ export default () => {addBtn.addEventListener('click', () => {
     newBooks.push(newBook);
     localStorage.setItem('storageBooks', JSON.stringify(newBooks));
     addBooktoHTML(title.value, author.value)
+    title.value = ''
+    author.value = ''
   }
 })}

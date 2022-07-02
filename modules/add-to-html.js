@@ -10,8 +10,14 @@ const addBooktoHTML = (title, author) => {
         <button class="remove-btn">remove</button>
     `;
   booksContainer.appendChild(bookHTML);
+
+  let bookNodes = Array.from(booksContainer.children)
+  if (bookNodes.indexOf(bookHTML) % 2 === 0) {
+    bookHTML.classList.add('gray')
+  }
+
   bookHTML.addEventListener('click', () => {
-    let bookNodes = Array.from(booksContainer.children)
+    bookNodes = Array.from(booksContainer.children)
     newBooks.splice(bookNodes.indexOf(bookHTML), 1)
     localStorage.setItem('storageBooks', JSON.stringify(newBooks));
     booksContainer.removeChild(bookHTML)
