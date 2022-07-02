@@ -1,13 +1,16 @@
 import storageAvailable from "./storage-available.js";
 import addBooktoHTML from "./add-to-html.js";
-import { books as newBooks } from "./adding.js"
+export let books = [];
 
 const setStorage = () => {
   if (new storageAvailable('localStorage')) {
-    newBooks.books = JSON.parse(localStorage.getItem('storageBooks'));
-    newBooks.books.forEach((book) => {
-      addBooktoHTML(book.title, book.author)
-    })
+    let dataFromStorage = JSON.parse(localStorage.getItem('storageBooks'));
+    books = (dataFromStorage === null) ? [] : dataFromStorage
+    if (books !== null) {
+      books.forEach((book) => {
+        addBooktoHTML(book.title, book.author)
+      })
+    }
   }
 }
 
