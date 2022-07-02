@@ -1,7 +1,6 @@
 import Book from "./book-constructor.js";
 import addBooktoHTML from "./add-to-html.js";
 import { books as newBooks } from "./storage.js"
-import remove from "./removing.js"
 
 const addBtn = document.querySelector('.add-btn');
 const title = document.getElementById('title');
