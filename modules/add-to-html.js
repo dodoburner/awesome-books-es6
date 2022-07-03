@@ -1,5 +1,6 @@
+import { books as newBooks } from './storage.js';
+
 const booksContainer = document.getElementById('books-container');
-import { books as newBooks } from "./storage.js";
 
 const addBooktoHTML = (title, author) => {
   const bookHTML = document.createElement('div');
@@ -11,16 +12,16 @@ const addBooktoHTML = (title, author) => {
     `;
   booksContainer.appendChild(bookHTML);
 
-  let bookNodes = Array.from(booksContainer.children)
+  let bookNodes = Array.from(booksContainer.children);
   if (bookNodes.indexOf(bookHTML) % 2 === 0) {
-    bookHTML.classList.add('gray')
+    bookHTML.classList.add('gray');
   }
 
   bookHTML.addEventListener('click', () => {
-    bookNodes = Array.from(booksContainer.children)
-    newBooks.splice(bookNodes.indexOf(bookHTML), 1)
+    bookNodes = Array.from(booksContainer.children);
+    newBooks.splice(bookNodes.indexOf(bookHTML), 1);
     localStorage.setItem('storageBooks', JSON.stringify(newBooks));
-    booksContainer.removeChild(bookHTML)
-  })
-}
-export default addBooktoHTML
+    booksContainer.removeChild(bookHTML);
+  });
+};
+export default addBooktoHTML;
