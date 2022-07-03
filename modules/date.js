@@ -4,7 +4,7 @@ const createDate = () => {
   const now = DateTime.now().c;
   const dateBox = document.createElement('div');
   const listPage = document.querySelector('.list');
-  dateBox.innerHTML = `${now.day}-${now.month}-${now.year}, ${now.hour}:${now.minute}`;
+  dateBox.innerHTML = `${now.day}-${now.month}-${now.year}, ${now.hour}h:${now.minute}m`;
   document.body.insertBefore(dateBox, listPage);
   dateBox.classList.add('date-box');
 };
