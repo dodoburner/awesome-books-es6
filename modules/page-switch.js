@@ -3,7 +3,7 @@ const listPage = document.querySelector('.list');
 const addPage = document.querySelector('.add');
 const contactPage = document.querySelector('.contact');
 
-export default () => {
+const pageSwitch = () => {
   navLinks.forEach((link, index) => {
     link.addEventListener('click', () => {
       if (index === 0) {
@@ -31,3 +31,5 @@ export default () => {
     })
   });
 }
+
+export default pageSwitch

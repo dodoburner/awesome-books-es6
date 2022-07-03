@@ -2,7 +2,7 @@ import storageAvailable from "./storage-available.js";
 import addBooktoHTML from "./add-to-html.js";
 export let books = [];
 
-const setStorage = () => {
+const getStorage = () => {
   if (new storageAvailable('localStorage')) {
     let dataFromStorage = JSON.parse(localStorage.getItem('storageBooks'));
     books = (dataFromStorage === null) ? [] : dataFromStorage
