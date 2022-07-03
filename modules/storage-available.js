@@ -1,4 +1,4 @@
-export default class storageAvailable {
+export default class StorageAvailable {
   constructor(type) {
     this.type = type;
     this.storage = window[this.type];
