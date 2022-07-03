@@ -14,4 +14,4 @@ const getStorage = () => {
   }
 }
 
-export default setStorage
+export default getStorage
