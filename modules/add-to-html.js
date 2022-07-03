@@ -1,5 +1,4 @@
 const booksContainer = document.getElementById('books-container');
-const newBooks = JSON.parse(localStorage.getItem('storageBooks'));
 
 const addBooktoHTML = (title, author) => {
   const bookHTML = document.createElement('div');
@@ -17,6 +16,7 @@ const addBooktoHTML = (title, author) => {
   }
 
   bookHTML.children[2].addEventListener('click', () => {
+    const newBooks = JSON.parse(localStorage.getItem('storageBooks'));
     bookNodes = Array.from(booksContainer.children);
     newBooks.splice(bookNodes.indexOf(bookHTML), 1);
     localStorage.setItem('storageBooks', JSON.stringify(newBooks));
