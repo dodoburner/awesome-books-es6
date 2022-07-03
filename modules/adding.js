@@ -1,7 +1,8 @@
 import Book from './book-constructor.js';
 import addBooktoHTML from './add-to-html.js';
 
-const books = JSON.parse(localStorage.getItem('storageBooks'));
+const dataFromStorage = JSON.parse(localStorage.getItem('storageBooks'));
+const books = (dataFromStorage === null) ? [] : dataFromStorage;
 const addBtn = document.querySelector('.add-btn');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
