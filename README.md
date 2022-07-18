@@ -9,7 +9,7 @@ This is my awesome books page done with ES6, it has classes, modules, arrow func
 - HTML, CSS, JavaScript
 - Luxon
 
-##Live
+## Live
 - [Live link](https://dodoburner.github.io/awesome-books-es6/)
 
 ## Authors
